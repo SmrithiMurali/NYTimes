@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import apiCalls from "./services/nyTimesService";
-import { describe, test, expect, jest} from "@testing-library/jest-dom"
+import { describe, test, expect, jest } from "@testing-library/jest-dom";
 
 jest.mock("./services/nyTimesService");
 
@@ -28,7 +28,9 @@ describe("App Component", () => {
   });
 
   test("renders error message correctly", async () => {
-    apiCalls.getMostPopularArticles.mockRejectedValueOnce(new Error("Request failed"));
+    apiCalls.getMostPopularArticles.mockRejectedValueOnce(
+      new Error("Request failed")
+    );
 
     render(
       <MemoryRouter>
@@ -37,7 +39,9 @@ describe("App Component", () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText("Something went wrong, please rty again later")).toBeInTheDocument();
+      expect(
+        screen.getByText("Something went wrong, please rty again later")
+      ).toBeInTheDocument();
     });
   });
 });
