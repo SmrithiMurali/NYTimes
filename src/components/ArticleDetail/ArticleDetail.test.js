@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Route, useParams, Routes } from "react-router-dom";
 import ArticleDetail from "./ArticleDetail";
-import { describe, test, expect, jest } from "@testing-library/jest-dom";
+import "@testing-library/jest-dom";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),

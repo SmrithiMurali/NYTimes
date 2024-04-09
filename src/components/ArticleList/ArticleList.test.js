@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import ArticleList from "./ArticleList";
 import { Route, Routes, MemoryRouter } from "react-router-dom";
-import { describe, test, expect } from "@testing-library/jest-dom";
+import "@testing-library/jest-dom";
 
 describe("ArticleList Component", () => {
   test("renders no results message correctly when articles array is empty", () => {

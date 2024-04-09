@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import ArticleCard from "./ArticleCard";
-import { describe, test, expect } from "@testing-library/jest-dom";
+import "@testing-library/jest-dom";
 
 describe("ArticleCard Component", () => {
   test("renders article card correctly", () => {

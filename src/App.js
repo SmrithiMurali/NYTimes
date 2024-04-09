@@ -22,12 +22,12 @@ const App = () => {
         if (data.status === "OK") {
           setArticles(data.results);
         } else {
-          setError("Something went wrong, please rty again later");
+          setError("Something went wrong, please try again later");
         }
       })
       .catch(() => {
         setLoading(false);
-        setError("Something went wrong, please rty again later");
+        setError("Something went wrong, please try again later");
       });
   }, []);
 

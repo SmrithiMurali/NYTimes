@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import apiCalls from "./services/nyTimesService";
-import { describe, test, expect, jest } from "@testing-library/jest-dom";
+import "@testing-library/jest-dom";
 
 jest.mock("./services/nyTimesService");
 
@@ -40,7 +40,7 @@ describe("App Component", () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("Something went wrong, please rty again later")
+        screen.getByText("Something went wrong, please try again later")
       ).toBeInTheDocument();
     });
   });

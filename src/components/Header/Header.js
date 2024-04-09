@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header>
       <h1>The New York Times</h1>
-      <p>Top stories for today, {formatMonths[month] + ' ' + numDate}</p>
+      <p>Most Popular stories for today, {formatMonths[month] + ' ' + numDate}</p>
     </header>
   )
 
