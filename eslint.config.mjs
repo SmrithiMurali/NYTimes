@@ -7,10 +7,22 @@ const config = [
   pluginJs.configs.recommended,
   pluginReactConfig,
   {
+    files: ["**/*.test.js"],
+    languageOptions: {
+      globals: {
+        test: "readonly",
+        describe: "readonly",
+        jest: "readonly",
+        expect: "readonly",
+      },
+    },
+  },
+  {
+    files: ["**/*.js"],
     settings: {
       react: {
-        version: "detect"
-      }
+        version: "detect",
+      },
     },
     rules: {
       "react/prop-types": "off",
