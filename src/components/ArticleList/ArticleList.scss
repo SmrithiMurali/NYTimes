@@ -1,0 +1,24 @@
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 20px;
+  flex-grow: 1;
+}
+
+.no-results-msg {
+  text-align: center;
+  margin: 30px;
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  .article-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480) {
+  .article-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
